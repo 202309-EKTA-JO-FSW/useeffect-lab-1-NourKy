@@ -1,6 +1,7 @@
 
 
-export default function ShoppingList({ dogsList = [] }) {
+export default function ShoppingList({ dogsList=[]}) {
+  console.log(`dogsList`,dogsList)
   return (
     <div className="shopping-cart">
       <h3 style={{ textAlign: "center" }}>
@@ -9,8 +10,8 @@ export default function ShoppingList({ dogsList = [] }) {
           🐶
         </span>
       </h3>
-      {dogsList.map((dog) => (
-        <img src={dog} alt="" />
+      {dogsList !== null && dogsList.map((dog,index) => (
+        <img key={index}src={dog} alt="" />
       ))}
     </div>
   );

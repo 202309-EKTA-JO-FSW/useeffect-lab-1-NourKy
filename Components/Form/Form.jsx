@@ -23,6 +23,7 @@ export default function Form({ setNumberOfDogs }) {
         <button
           onClick={(e) => {
             e.preventDefault();
+            setNumberOfDogs(inputText)
             // When we click on the WOOF! button, what happens?
           }}
           type="submit"
